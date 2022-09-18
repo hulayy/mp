@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-U-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <title>Proškvorky</title>
+</head>
+<body>
+    <div class="plocha" id="plocha">
+    
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+        <div class="box" data-cell></div>
+
+
+
+
+
+
+
+        <!-- <div class="box" id="1" data-cell></div>
+        <div class="box" id="2" data-cell></div>
+        <div class="box" id="3" data-cell></div>
+        <div class="box" id="4" data-cell></div>
+        <div class="box" id="5" data-cell></div>
+        <div class="box" id="6" data-cell></div>
+        <div class="box" id="7" data-cell></div>
+        <div class="box" id="8" data-cell></div>
+        <div class="box" id="9" data-cell></div>
+        <div class="box" id="10" data-cell></div>
+        <div class="box" id="11" data-cell></div>
+        <div class="box" id="12" data-cell></div>
+        <div class="box" id="13" data-cell></div>
+        <div class="box" id="14" data-cell></div>
+        <div class="box" id="15" data-cell></div>
+        <div class="box" id="16" data-cell></div>
+        <div class="box" id="17" data-cell></div>
+        <div class="box" id="18" data-cell></div>
+        <div class="box" id="19" data-cell></div>
+        <div class="box" id="20" data-cell></div>
+        <div class="box" id="21" data-cell></div>
+        <div class="box" id="22" data-cell></div>
+        <div class="box" id="23" data-cell></div>
+        <div class="box" id="24" data-cell></div>
+        <div class="box" id="25" data-cell></div>
+        <div class="box" id="26" data-cell></div>
+        <div class="box" id="27" data-cell></div>
+        <div class="box" id="28" data-cell></div>
+        <div class="box" id="29" data-cell></div>
+        <div class="box" id="30" data-cell></div>
+        <div class="box" id="31" data-cell></div>
+        <div class="box" id="32" data-cell></div>
+        <div class="box" id="33" data-cell></div>
+        <div class="box" id="34" data-cell></div>
+        <div class="box" id="35" data-cell></div>
+        <div class="box" id="36" data-cell></div>
+        <div class="box" id="37" data-cell></div>
+        <div class="box" id="38" data-cell></div>
+        <div class="box" id="39" data-cell></div>
+        <div class="box" id="40" data-cell></div>
+        <div class="box" id="41" data-cell></div>
+        <div class="box" id="42" data-cell></div>
+        <div class="box" id="43" data-cell></div>
+        <div class="box" id="44" data-cell></div>
+        <div class="box" id="45" data-cell></div>
+        <div class="box" id="46" data-cell></div>
+        <div class="box" id="47" data-cell></div>
+        <div class="box" id="48" data-cell></div>
+        <div class="box" id="49" data-cell></div>
+        <div class="box" id="50" data-cell></div>
+        <div class="box" id="51" data-cell></div>
+        <div class="box" id="52" data-cell></div>
+        <div class="box" id="53" data-cell></div>
+        <div class="box" id="54" data-cell></div>
+        <div class="box" id="55" data-cell></div>
+        <div class="box" id="56" data-cell></div>
+        <div class="box" id="57" data-cell></div>
+        <div class="box" id="58" data-cell></div>
+        <div class="box" id="59" data-cell></div>
+        <div class="box" id="60" data-cell></div>
+        <div class="box" id="61" data-cell></div>
+        <div class="box" id="62" data-cell></div>
+        <div class="box" id="63" data-cell></div>
+        <div class="box" id="64" data-cell></div>
+        <div class="box" id="65" data-cell></div>
+        <div class="box" id="66" data-cell></div>
+        <div class="box" id="67" data-cell></div>
+        <div class="box" id="68" data-cell></div>
+        <div class="box" id="69" data-cell></div>
+        <div class="box" id="70" data-cell></div>
+        <div class="box" id="71" data-cell></div>
+        <div class="box" id="72" data-cell></div>
+        <div class="box" id="73" data-cell></div>
+        <div class="box" id="74" data-cell></div>
+        <div class="box" id="75" data-cell></div>
+        <div class="box" id="76" data-cell></div>
+        <div class="box" id="77" data-cell></div>
+        <div class="box" id="78" data-cell></div>
+        <div class="box" id="79" data-cell></div>
+        <div class="box" id="80" data-cell></div>
+        <div class="box" id="81" data-cell></div>
+        <div class="box" id="82" data-cell></div>
+        <div class="box" id="83" data-cell></div>
+        <div class="box" id="84" data-cell></div>
+        <div class="box" id="85" data-cell></div>
+        <div class="box" id="86" data-cell></div>
+        <div class="box" id="87" data-cell></div>
+        <div class="box" id="88" data-cell></div>
+        <div class="box" id="89" data-cell></div>
+        <div class="box" id="90" data-cell></div>
+        <div class="box" id="91" data-cell></div>
+        <div class="box" id="91" data-cell></div>
+        <div class="box" id="92" data-cell></div>
+        <div class="box" id="93" data-cell></div>
+        <div class="box" id="94" data-cell></div>
+        <div class="box" id="95" data-cell></div>
+        <div class="box" id="96" data-cell></div>
+        <div class="box" id="97" data-cell></div>
+        <div class="box" id="98" data-cell></div>
+        <div class="box" id="99" data-cell></div>
+        <div class="box" id="100" data-cell></div>
+        <div class="box" id="101" data-cell></div>
+        <div class="box" id="102" data-cell></div>
+        <div class="box" id="103" data-cell></div>
+        <div class="box" id="103" data-cell></div>
+        <div class="box" id="104" data-cell></div>
+        <div class="box" id="105" data-cell></div>
+        <div class="box" id="106" data-cell></div>
+        <div class="box" id="107" data-cell></div>
+        <div class="box" id="108" data-cell></div>
+        <div class="box" id="109" data-cell></div>
+        <div class="box" id="110" data-cell></div>
+        <div class="box" id="111" data-cell></div>
+        <div class="box" id="112" data-cell></div>
+        <div class="box" id="113" data-cell></div>
+        <div class="box" id="114" data-cell></div>
+        <div class="box" id="115" data-cell></div>
+        <div class="box" id="116" data-cell></div>
+        <div class="box" id="117" data-cell></div>
+        <div class="box" id="118" data-cell></div>
+        <div class="box" id="119" data-cell></div>
+        <div class="box" id="120" data-cell></div>
+        <div class="box" id="121" data-cell></div>
+        <div class="box" id="122" data-cell></div>
+        <div class="box" id="123" data-cell></div>
+        <div class="box" id="124" data-cell></div>
+        <div class="box" id="125" data-cell></div>
+        <div class="box" id="126" data-cell></div>
+        <div class="box" id="127" data-cell></div>
+        <div class="box" id="128" data-cell></div>
+        <div class="box" id="129" data-cell></div>
+        <div class="box" id="130" data-cell></div>
+        <div class="box" id="131" data-cell></div>
+        <div class="box" id="132" data-cell></div>
+        <div class="box" id="133" data-cell></div>
+        <div class="box" id="134" data-cell></div>
+        <div class="box" id="135" data-cell></div>
+        <div class="box" id="136" data-cell></div>
+        <div class="box" id="137" data-cell></div>
+        <div class="box" id="138" data-cell></div>
+        <div class="box" id="139" data-cell></div>
+        <div class="box" id="140" data-cell></div>
+        <div class="box" id="141" data-cell></div>
+        <div class="box" id="142" data-cell></div>
+        <div class="box" id="143" data-cell></div>
+        <div class="box" id="144" data-cell></div>
+        <div class="box" id="145" data-cell></div>
+        <div class="box" id="146" data-cell></div>
+        <div class="box" id="147" data-cell></div>
+        <div class="box" id="148" data-cell></div>
+        <div class="box" id="149" data-cell></div>
+        <div class="box" id="150" data-cell></div>
+        <div class="box" id="151" data-cell></div>
+        <div class="box" id="152" data-cell></div>
+        <div class="box" id="153" data-cell></div>
+        <div class="box" id="154" data-cell></div>
+        <div class="box" id="155" data-cell></div>
+        <div class="box" id="156" data-cell></div>
+        <div class="box" id="157" data-cell></div>
+        <div class="box" id="158" data-cell></div>
+        <div class="box" id="159" data-cell></div>
+        <div class="box" id="160" data-cell></div>
+        <div class="box" id="161" data-cell></div>
+        <div class="box" id="162" data-cell></div>
+        <div class="box" id="163" data-cell></div>
+        <div class="box" id="164" data-cell></div>
+        <div class="box" id="165" data-cell></div>
+        <div class="box" id="166" data-cell></div>
+        <div class="box" id="167" data-cell></div>
+        <div class="box" id="168" data-cell></div>
+        <div class="box" id="169" data-cell></div>
+        <div class="box" id="170" data-cell></div>
+        <div class="box" id="171" data-cell></div>
+        <div class="box" id="172" data-cell></div>
+        <div class="box" id="173" data-cell></div>
+        <div class="box" id="174" data-cell></div>
+        <div class="box" id="175" data-cell></div>
+        <div class="box" id="176" data-cell></div>
+        <div class="box" id="177" data-cell></div>
+        <div class="box" id="178" data-cell></div>
+        <div class="box" id="179" data-cell></div>
+        <div class="box" id="180" data-cell></div>
+        <div class="box" id="181" data-cell></div>
+        <div class="box" id="182" data-cell></div>
+        <div class="box" id="183" data-cell></div>
+        <div class="box" id="184" data-cell></div>
+        <div class="box" id="185" data-cell></div>
+        <div class="box" id="186" data-cell></div>
+        <div class="box" id="187" data-cell></div>
+        <div class="box" id="188" data-cell></div>
+        <div class="box" id="189" data-cell></div>
+        <div class="box" id="190" data-cell></div>
+        <div class="box" id="191" data-cell></div>
+        <div class="box" id="192" data-cell></div>
+        <div class="box" id="193" data-cell></div>
+        <div class="box" id="194" data-cell></div>
+        <div class="box" id="195" data-cell></div>
+        <div class="box" id="196" data-cell></div>
+        <div class="box" id="197" data-cell></div>
+        <div class="box" id="198" data-cell></div>
+        <div class="box" id="199" data-cell></div>
+        <div class="box" id="200" data-cell></div>
+        <div class="box" id="201" data-cell></div>
+        <div class="box" id="202" data-cell></div>
+        <div class="box" id="203" data-cell></div>
+        <div class="box" id="204" data-cell></div>
+        <div class="box" id="205" data-cell></div>
+        <div class="box" id="206" data-cell></div>
+        <div class="box" id="207" data-cell></div>
+        <div class="box" id="208" data-cell></div>
+        <div class="box" id="209" data-cell></div>
+        <div class="box" id="210" data-cell></div>
+        <div class="box" id="211" data-cell></div>
+        <div class="box" id="212" data-cell></div>
+        <div class="box" id="213" data-cell></div>
+        <div class="box" id="214" data-cell></div>
+        <div class="box" id="215" data-cell></div>
+        <div class="box" id="216" data-cell></div>
+        <div class="box" id="217" data-cell></div>
+        <div class="box" id="218" data-cell></div>
+        <div class="box" id="219" data-cell></div>
+        <div class="box" id="220" data-cell></div>
+        <div class="box" id="221" data-cell></div>
+        <div class="box" id="222" data-cell></div>
+        <div class="box" id="223" data-cell></div>
+        <div class="box" id="224" data-cell></div>
+        <div class="box" id="225" data-cell></div>
+        <div class="box" id="226" data-cell></div>
+        <div class="box" id="227" data-cell></div>
+        <div class="box" id="228" data-cell></div>
+        <div class="box" id="229" data-cell></div>
+        <div class="box" id="230" data-cell></div>
+        <div class="box" id="231" data-cell></div>
+        <div class="box" id="232" data-cell></div>
+        <div class="box" id="233" data-cell></div>
+        <div class="box" id="234" data-cell></div>
+        <div class="box" id="235" data-cell></div>
+        <div class="box" id="236" data-cell></div>
+        <div class="box" id="237" data-cell></div>
+        <div class="box" id="238" data-cell></div>
+        <div class="box" id="239" data-cell></div>
+        <div class="box" id="240" data-cell></div>
+        <div class="box" id="241" data-cell></div>
+        <div class="box" id="242" data-cell></div>
+        <div class="box" id="243" data-cell></div>
+        <div class="box" id="244" data-cell></div>
+        <div class="box" id="245" data-cell></div>
+        <div class="box" id="246" data-cell></div>
+        <div class="box" id="247" data-cell></div>
+        <div class="box" id="248" data-cell></div>
+        <div class="box" id="249" data-cell></div>
+        <div class="box" id="250" data-cell></div>
+        <div class="box" id="251" data-cell></div>
+        <div class="box" id="252" data-cell></div>
+        <div class="box" id="253" data-cell></div>
+        <div class="box" id="254" data-cell></div>
+        <div class="box" id="255" data-cell></div>
+        <div class="box" id="256" data-cell></div>
+        <div class="box" id="257" data-cell></div>
+        <div class="box" id="258" data-cell></div>
+        <div class="box" id="259" data-cell></div>
+        <div class="box" id="260" data-cell></div>
+        <div class="box" id="261" data-cell></div>
+        <div class="box" id="262" data-cell></div>
+        <div class="box" id="263" data-cell></div>
+        <div class="box" id="264" data-cell></div>
+        <div class="box" id="265" data-cell></div>
+        <div class="box" id="266" data-cell></div>
+        <div class="box" id="267" data-cell></div>
+        <div class="box" id="268" data-cell></div>
+        <div class="box" id="269" data-cell></div>
+        <div class="box" id="270" data-cell></div>
+        <div class="box" id="271" data-cell></div>
+        <div class="box" id="272" data-cell></div>
+        <div class="box" id="273" data-cell></div>
+        <div class="box" id="274" data-cell></div>
+        <div class="box" id="275" data-cell></div>
+        <div class="box" id="276" data-cell></div>
+        <div class="box" id="277" data-cell></div>
+        <div class="box" id="278" data-cell></div>
+        <div class="box" id="279" data-cell></div>
+        <div class="box" id="280" data-cell></div>
+        <div class="box" id="281" data-cell></div>
+        <div class="box" id="282" data-cell></div>
+        <div class="box" id="283" data-cell></div>
+        <div class="box" id="284" data-cell></div>
+        <div class="box" id="285" data-cell></div>
+        <div class="box" id="286" data-cell></div>
+        <div class="box" id="287" data-cell></div>
+        <div class="box" id="288" data-cell></div>
+        <div class="box" id="289" data-cell></div>
+        <div class="box" id="290" data-cell></div>
+        <div class="box" id="291" data-cell></div>
+        <div class="box" id="292" data-cell></div>
+        <div class="box" id="293" data-cell></div>
+        <div class="box" id="294" data-cell></div>
+        <div class="box" id="295" data-cell></div>
+        <div class="box" id="296" data-cell></div>
+        <div class="box" id="297" data-cell></div>
+        <div class="box" id="298" data-cell></div>
+        <div class="box" id="299" data-cell></div>
+        <div class="box" id="300" data-cell></div>
+        <div class="box" id="301" data-cell></div>
+        <div class="box" id="302" data-cell></div>
+        <div class="box" id="303" data-cell></div>
+        <div class="box" id="304" data-cell></div>
+        <div class="box" id="305" data-cell></div>
+        <div class="box" id="306" data-cell></div>
+        <div class="box" id="307" data-cell></div>
+        <div class="box" id="308" data-cell></div>
+        <div class="box" id="309" data-cell></div>
+        <div class="box" id="310" data-cell></div>
+        <div class="box" id="311" data-cell></div>
+        <div class="box" id="312" data-cell></div>
+        <div class="box" id="313" data-cell></div>
+        <div class="box" id="314" data-cell></div>
+        <div class="box" id="315" data-cell></div>
+        <div class="box" id="316" data-cell></div>
+        <div class="box" id="317" data-cell></div>
+        <div class="box" id="318" data-cell></div>
+        <div class="box" id="319" data-cell></div>
+        <div class="box" id="320" data-cell></div>
+        <div class="box" id="321" data-cell></div>
+        <div class="box" id="322" data-cell></div>
+        <div class="box" id="323" data-cell></div>
+        <div class="box" id="324" data-cell></div>
+        <div class="box" id="325" data-cell></div>
+        <div class="box" id="326" data-cell></div>
+        <div class="box" id="327" data-cell></div>
+        <div class="box" id="328" data-cell></div>
+        <div class="box" id="329" data-cell></div>
+        <div class="box" id="330" data-cell></div>
+        <div class="box" id="331" data-cell></div>
+        <div class="box" id="332" data-cell></div>
+        <div class="box" id="333" data-cell></div>
+        <div class="box" id="334" data-cell></div>
+        <div class="box" id="335" data-cell></div>
+        <div class="box" id="336" data-cell></div>
+        <div class="box" id="337" data-cell></div>
+        <div class="box" id="338" data-cell></div>
+        <div class="box" id="339" data-cell></div>
+        <div class="box" id="340" data-cell></div>
+        <div class="box" id="341" data-cell></div>
+        <div class="box" id="342" data-cell></div>
+        <div class="box" id="343" data-cell></div>
+        <div class="box" id="345" data-cell></div>
+        <div class="box" id="346" data-cell></div>
+        <div class="box" id="347" data-cell></div>
+        <div class="box" id="348" data-cell></div>
+        <div class="box" id="349" data-cell></div>
+        <div class="box" id="350" data-cell></div>
+        <div class="box" id="351" data-cell></div>
+        <div class="box" id="352" data-cell></div>
+        <div class="box" id="353" data-cell></div>
+        <div class="box" id="354" data-cell></div>
+        <div class="box" id="355" data-cell></div>
+        <div class="box" id="356" data-cell></div>
+        <div class="box" id="357" data-cell></div>
+        <div class="box" id="358" data-cell></div>
+        <div class="box" id="359" data-cell></div>
+        <div class="box" id="360" data-cell></div>
+        <div class="box" id="361" data-cell></div>
+        <div class="box" id="362" data-cell></div>
+        <div class="box" id="363" data-cell></div> -->
+    </div>
+
+    <!-- <div class="vo">
+        <h1 class="nadpis">Vyhrál hráč se symbolem X</h1>
+        <button class="restart" value="Restartovat"></button>
+    </div> -->
+
+    <script src="js/app.js"></script>
+</body>
+</html>

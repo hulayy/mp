@@ -1,0 +1,135 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --velCtverce: 50px;
+    --velSymbolu: calc(var(--velCtverce) * .9);
+}
+
+body {
+    margin: 0;
+}
+
+.plocha {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(26, auto);
+}
+
+.box  {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: white;
+    border: 1px solid black ; 
+}
+
+.box:nth-child(1n + 1) {
+    border-left: none;
+}
+
+.box:nth-child(26n + 26) {
+    border-right: none;
+}
+
+.box:nth-child(1n + 1) {
+    border-top: none;
+}
+
+.box:nth-child(1n + 339) {
+    border-bottom: none;
+}
+
+.box:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.box.x {
+    justify-content: center;
+    position: relative;
+}
+
+.box.x::before {
+    position: absolute;
+    content: '';
+    height: var(--velSymbolu);
+    width: calc(var(--velSymbolu) * .10);
+    background-color: rgb(9, 72, 245);
+    transform: rotate(45deg);
+}
+
+.box.x::after {
+    position: absolute;
+    content: '';
+    height: var(--velSymbolu);
+    width: calc(var(--velSymbolu) * .10);
+    background-color: rgb(9, 72, 245);
+    transform: rotate(-45deg);
+}
+
+
+.box.o {
+    justify-content: center;
+}
+
+.box.o::before {
+    position: absolute;
+    content: '';
+    height: calc(var(--velSymbolu) * .9);
+    width: calc(var(--velSymbolu) * .9);
+    background-color: none;
+    margin-top: .1em;
+    border: 5px solid red;
+    border-radius: 50%;
+}
+
+.box.t {
+    justify-content: center;
+}
+
+.box.t::before {
+    content: '';
+    position: absolute;
+    margin-right: 1.25rem;
+    height: calc(var(--velSymbolu) * 0.9);
+    width: calc(var(--velSymbolu) * .10);
+    background-color: green;
+    transform: rotate(35deg);
+    margin-top: .1em;
+} 
+
+.box.t::after {
+    content: '';
+    position: absolute;
+    margin-left: 1.3rem;
+    height: calc(var(--velSymbolu) * 0.9);
+    width: calc(var(--velSymbolu) * .10);
+    background-color: green;
+    transform: rotate(-35deg); 
+    margin-top: .1em;
+} 
+
+.box.x,
+.box.o,
+.box.t {
+    cursor: not-allowed;
+    background-color: white;
+}
+
+
+.vo.show {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.274);
+}
