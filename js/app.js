@@ -59,20 +59,48 @@ function vlozSymbol(box, symbol) {
         id: objekt.id
     }); 
         
-    kontrolaVyhry(objekt.symbol, objekt.id, index);
+    console.log(data);
+
+    // if (data[index].length < 5) 
+    //     console.log("Na poli je méně než 5 " + objekt.symbol + " -> neprobíhá kontrola výhry");
+    // else 
+        kontrolaVyhry(data, objekt, index);
 }
 
-function kontrolaVyhry(symbol, id, index) {
-    console.log(symbol + " " + id);
+function kontrolaVyhry(data, objekt, index) {
+    console.log(objekt.symbol + " " + objekt.id);
     let i = 0; 
 
-    while (i < data[index].length) {
-        console.log("SYMBOL: " + symbol, data[index][i]);
-        docasneData.push(data[index][i]);
-        i++;
+    var indexLength = data[index].length;
+
+    if (indexLength >= 5) {
+
+        // data[index].forEach(id => {
+        //     console.log("DATA: "+ id);
+        // });
+
+        for (let i = indexLength; i > 0; i--) {
+            console.log(data[index][i - 1].id);
+
+            data[index].forEach(id => {
+                if ((data[index][i - 1].id - 1) == id) {
+                    console.log("TRUE");
+                } else {
+                    console.log(id);
+                }
+
+            });
+            
+        }
     }
 
-    console.log(data[index]);
+    // while (i < data[index].length) {
+    //     console.log("SYMBOL: " + symbol, data[index][i]);
+    //     docasneData.push(data[index][i]);
+    //     i++;
+    // }
+
+    // console.log(data[index]);
 
     // for (let i = 0; i < data[index].length; i++) {
     //     console.log(i);
