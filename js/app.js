@@ -13,7 +13,6 @@ let data = [
     [o] = [],
     [t] = [],
 ];
-let docasneData = [];
 
 
 hraciPole.forEach(box => {
@@ -47,6 +46,8 @@ function zpracujKlik(e) {
     } else {
         poradi = 0;
     }
+
+    console.log(hraciPole);
 }
 
 function vlozSymbol(box, symbol) {
@@ -55,57 +56,18 @@ function vlozSymbol(box, symbol) {
     
     let objekt = new novyObjekt(symbol, id);
 
-    data[index].push({
-        id: objekt.id
-    }); 
-        
-    console.log(data);
-
-    // if (data[index].length < 5) 
-    //     console.log("Na poli je méně než 5 " + objekt.symbol + " -> neprobíhá kontrola výhry");
-    // else 
-        kontrolaVyhry(data, objekt, index);
+    kontrolaVyhry(data, objekt, index);
 }
 
 function kontrolaVyhry(data, objekt, index) {
     console.log(objekt.symbol + " " + objekt.id);
-    let i = 0; 
-
-    var indexLength = data[index].length;
-
-    if (indexLength >= 5) {
-
-        // data[index].forEach(id => {
-        //     console.log("DATA: "+ id);
-        // });
-
-        for (let i = indexLength; i > 0; i--) {
-            console.log(data[index][i - 1].id);
-
-            data[index].forEach(id => {
-                if ((data[index][i - 1].id - 1) == id) {
-                    console.log("TRUE");
-                } else {
-                    console.log(id);
-                }
-
-            });
-            
+    
+    for (let i = 0; i < 26; i++) {
+        if (hraciPole[i] == hraciPole[i+1] && hraciPole[i+1] == hraciPole[i+2] &&hraciPole[i+2] == hraciPole[i+3] && hraciPole[i+3]
+        == hraciPole[i+4]) {
+            console.log("VYHRA " + objekt.symbol);
         }
     }
-
-    // while (i < data[index].length) {
-    //     console.log("SYMBOL: " + symbol, data[index][i]);
-    //     docasneData.push(data[index][i]);
-    //     i++;
-    // }
-
-    // console.log(data[index]);
-
-    // for (let i = 0; i < data[index].length; i++) {
-    //     console.log(i);
-    //     console.log("HODNOTY X = " + data[index][i]);
-    // }
 }
   
 function novyObjekt(symbol, id) {
