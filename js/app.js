@@ -64,18 +64,22 @@ function vlozSymbol(box, symbol) {
 
 function kontrolaVyhry(data, objekt, index) {
     console.log(objekt.childName + " " + objekt.id);
-    console.log(hraciPole[0].childNodes[0].className);
 
-    for (let i = 0; i < 26; i++) {
+    // console.log(hraciPole[0].childNodes[0].className);
+
+    
+    for (let i = 0; i < 26*14; i++) {
         if (hraciPole[i].hasChildNodes() && hraciPole[i + 1].hasChildNodes() && hraciPole[i + 2].hasChildNodes() && hraciPole[i + 3].hasChildNodes() && hraciPole[i + 4].hasChildNodes()) {
-            if (hraciPole[i].className == hraciPole[i+1].className && hraciPole[i+1].className == hraciPole[i+2].className && 
-                hraciPole[i+2].className == hraciPole[i+3].className && hraciPole[i+3].className == hraciPole[i+4].className) {
+            if (hraciPole[i].childNodes[0].className == hraciPole[i+1].childNodes[0].className && 
+                hraciPole[i+1].childNodes[0].className == hraciPole[i+2].childNodes[0].className && 
+                hraciPole[i+2].childNodes[0].className == hraciPole[i+3].childNodes[0].className && 
+                hraciPole[i+3].childNodes[0].className == hraciPole[i+4].childNodes[0].className) {
+
                 console.log("VYHRA " + objekt.symbol);
             }
-        } else {
-            console.log("Nedostatek child nodes");
         }
     }
+    
 }
   
 function novyObjekt(symbol, id, childName) {
