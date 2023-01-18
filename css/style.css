@@ -3,7 +3,7 @@
 }
 
 :root {
-    --velCtverce: 50px;
+    --velCtverce: 3rem;
     --velSymbolu: calc(var(--velCtverce) * .9);
 }
 
@@ -30,7 +30,7 @@ body {
     border: 1px solid black ; 
 }
 
-.box:nth-child(1n + 1) {
+/* .box:nth-child(1n + 1) {
     border-left: none;
 }
 
@@ -44,19 +44,20 @@ body {
 
 .box:nth-child(1n + 339) {
     border-bottom: none;
-}
+} */
 
 .box:hover {
     background-color: rgb(211, 211, 211);
     cursor: pointer;
 }
 
-.box.x {
+div.x {
     justify-content: center;
-    position: relative;
+    margin-left: calc(var(--velCtverce)/2.1);
+    margin-top: calc(var(--velCtverce)/10);
 }
 
-.box.x::before {
+div.x::before {
     position: absolute;
     content: '';
     height: var(--velSymbolu);
@@ -65,7 +66,7 @@ body {
     transform: rotate(45deg);
 }
 
-.box.x::after {
+div.x::after {
     position: absolute;
     content: '';
     height: var(--velSymbolu);
@@ -75,11 +76,13 @@ body {
 }
 
 
-.box.o {
+div.o {
     justify-content: center;
+    margin-left: calc(var(--velCtverce)/9);
+    margin-top: calc(var(--velCtverce)/11);
 }
 
-.box.o::before {
+div.o::before {
     position: absolute;
     content: '';
     height: calc(var(--velSymbolu) * .9);
@@ -90,11 +93,13 @@ body {
     border-radius: 50%;
 }
 
-.box.t {
+div.t {
     justify-content: center;
+    margin-left: calc(var(--velCtverce)/4);
+    margin-top: calc(var(--velCtverce)/11);
 }
 
-.box.t::before {
+div.t::before {
     content: '';
     position: absolute;
     margin-right: 1.25rem;
@@ -105,7 +110,7 @@ body {
     margin-top: .1em;
 } 
 
-.box.t::after {
+div.t::after {
     content: '';
     position: absolute;
     margin-left: 1.3rem;
@@ -116,11 +121,10 @@ body {
     margin-top: .1em;
 } 
 
-.box.x,
-.box.o,
-.box.t {
-    cursor: not-allowed;
-    background-color: white;
+div.x,
+div.o,
+div.t {
+    cursor: not-allowed; 
 }
 
 

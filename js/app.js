@@ -46,33 +46,44 @@ function zpracujKlik(e) {
     } else {
         poradi = 0;
     }
-
-    console.log(hraciPole);
 }
 
 function vlozSymbol(box, symbol) {
-    box.classList.add(symbol);
+    var symbolDiv = document.createElement('div');
+    symbolDiv.className = symbol;
+
+    box.appendChild(symbolDiv);
+
     let id = box.getAttribute('id');
-    
-    let objekt = new novyObjekt(symbol, id);
+    let childName = box.childNodes[0].className;
+
+    let objekt = new novyObjekt(symbol, id, childName);
 
     kontrolaVyhry(data, objekt, index);
 }
 
 function kontrolaVyhry(data, objekt, index) {
-    console.log(objekt.symbol + " " + objekt.id);
-    
+    console.log(objekt.childName + " " + objekt.id);
+
+    console.log(hraciPole[0].childNodes[0].className);
+
     for (let i = 0; i < 26; i++) {
-        if (hraciPole[i] == hraciPole[i+1] && hraciPole[i+1] == hraciPole[i+2] &&hraciPole[i+2] == hraciPole[i+3] && hraciPole[i+3]
-        == hraciPole[i+4]) {
-            console.log("VYHRA " + objekt.symbol);
+        console.log(hraciPole[i].hasChildNodes);
+        if (hraciPole[i].hasChildNodes && hraciPole[i + 1].hasChildNodes && hraciPole[i + 2].hasChildNodes && hraciPole[i + 3].hasChildNodes && hraciPole[i + 4].hasChildNodes) {
+            if (hraciPole[i].className == hraciPole[i+1].className && hraciPole[i+1].className == hraciPole[i+2].className && 
+                hraciPole[i+2].className == hraciPole[i+3].className && hraciPole[i+3].className == hraciPole[i+4].className) {
+                console.log("VYHRA " + objekt.symbol);
+            }
+        } else {
+            console.log("Nedostatek child nodes");
         }
     }
 }
   
-function novyObjekt(symbol, id) {
+function novyObjekt(symbol, id, childName) {
     this.symbol = symbol;
     this.id = id;
+    this.childName = childName;
 }
 
 
