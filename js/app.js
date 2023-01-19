@@ -59,29 +59,99 @@ function vlozSymbol(box, symbol) {
 
     let objekt = new novyObjekt(symbol, id, childName);
 
-    kontrolaVyhry(data, objekt, index);
+    var vyhercuvSymbol = kontrolaVyhry(data, objekt, index);
+
+    if (vyhercuvSymbol) {
+        console.log("Vyhrál hráč se symbolem: " + vyhercuvSymbol);
+        vyherniObrazovka(vyhercuvSymbol);
+    }
 }
 
 function kontrolaVyhry(data, objekt, index) {
     console.log(objekt.childName + " " + objekt.id);
-
-    // console.log(hraciPole[0].childNodes[0].className);
-
     
-    for (let i = 0; i < 26*14; i++) {
-        if (hraciPole[i].hasChildNodes() && hraciPole[i + 1].hasChildNodes() && hraciPole[i + 2].hasChildNodes() && hraciPole[i + 3].hasChildNodes() && hraciPole[i + 4].hasChildNodes()) {
-            if (hraciPole[i].childNodes[0].className == hraciPole[i+1].childNodes[0].className && 
-                hraciPole[i+1].childNodes[0].className == hraciPole[i+2].childNodes[0].className && 
-                hraciPole[i+2].childNodes[0].className == hraciPole[i+3].childNodes[0].className && 
-                hraciPole[i+3].childNodes[0].className == hraciPole[i+4].childNodes[0].className) {
+    for (let i = 0; i < 27*15; i++) {
+        // Kontrola horizontálně 
+        if (hraciPole[i] && hraciPole[i + 1] && hraciPole[i + 2] && hraciPole[i + 3] && hraciPole[i + 4]) {
+            if (hraciPole[i].hasChildNodes() && hraciPole[i + 1].hasChildNodes() && hraciPole[i + 2].hasChildNodes() && hraciPole[i + 3].hasChildNodes() && hraciPole[i + 4].hasChildNodes()) {
+                if (hraciPole[i].childNodes[0].className == hraciPole[i+1].childNodes[0].className && 
+                    hraciPole[i+1].childNodes[0].className == hraciPole[i+2].childNodes[0].className && 
+                    hraciPole[i+2].childNodes[0].className == hraciPole[i+3].childNodes[0].className && 
+                    hraciPole[i+3].childNodes[0].className == hraciPole[i+4].childNodes[0].className) {
 
-                console.log("VYHRA " + objekt.symbol);
+                    return objekt.symbol;
+                }
+            }
+        }
+
+        //Kontrola Vertikálně 
+        if (hraciPole[i] && hraciPole[i + 26] && hraciPole[i + 26*2] && hraciPole[i + 26*3] && hraciPole[i + 26*4]) {
+            if (hraciPole[i].hasChildNodes() && hraciPole[i + 26].hasChildNodes() && hraciPole[i + 26*2].hasChildNodes() && hraciPole[i + 26*3].hasChildNodes() && hraciPole[i + 26*4].hasChildNodes()) {
+                if (hraciPole[i].childNodes[0].className == hraciPole[i+26].childNodes[0].className && 
+                    hraciPole[i+26].childNodes[0].className == hraciPole[i+26*2].childNodes[0].className && 
+                    hraciPole[i+26*2].childNodes[0].className == hraciPole[i+26*3].childNodes[0].className && 
+                    hraciPole[i+26*3].childNodes[0].className == hraciPole[i+26*4].childNodes[0].className) {
+
+                    return objekt.symbol;
+                }
+            }
+        }
+
+        //Kontrola diagonálně z leva do prava
+        if (hraciPole[i] && hraciPole[i + 27] && hraciPole[i + 27*2] && hraciPole[i + 27*3] && hraciPole[i + 27*4]) {
+            if (hraciPole[i].hasChildNodes() && hraciPole[i + 27].hasChildNodes() && hraciPole[i + 27*2].hasChildNodes() && hraciPole[i + 27*3].hasChildNodes() && hraciPole[i + 27*4].hasChildNodes()) {
+                if (hraciPole[i].childNodes[0].className == hraciPole[i+27].childNodes[0].className && 
+                    hraciPole[i+27].childNodes[0].className == hraciPole[i+27*2].childNodes[0].className && 
+                    hraciPole[i+27*2].childNodes[0].className == hraciPole[i+27*3].childNodes[0].className && 
+                    hraciPole[i+27*3].childNodes[0].className == hraciPole[i+27*4].childNodes[0].className) {
+
+                    return objekt.symbol;
+                }
+            }
+        }
+
+        //Kontrola diagonálně z prava do leva
+        if (hraciPole[i] && hraciPole[i + 25] && hraciPole[i + 25*2] && hraciPole[i + 25*3] && hraciPole[i + 25*4]) {
+            if (hraciPole[i].hasChildNodes() && hraciPole[i + 25].hasChildNodes() && hraciPole[i + 25*2].hasChildNodes() && hraciPole[i + 25*3].hasChildNodes() && hraciPole[i + 25*4].hasChildNodes()) {
+                if (hraciPole[i].childNodes[0].className == hraciPole[i+25].childNodes[0].className && 
+                    hraciPole[i+25].childNodes[0].className == hraciPole[i+25*2].childNodes[0].className && 
+                    hraciPole[i+25*2].childNodes[0].className == hraciPole[i+25*3].childNodes[0].className && 
+                    hraciPole[i+25*3].childNodes[0].className == hraciPole[i+25*4].childNodes[0].className) {
+
+                    return objekt.symbol;
+                }
             }
         }
     }
+    return null; 
+}
+
+function vyherniObrazovka(symbol) {
+    var vyhra = document.getElementById('vyhra');
+
+    var text = document.createElement('h1');
+    text.className = "nadpis";
+    text.innerText = "Vyhrál hráč se symbolem: " + symbol;
+
+    var restart = document.createElement('button');
+    restart.className = "restart";
+    restart.innerText = "Hrát znovu";
+    restart.addEventListener('click', restart, false);
+
+    vyhra.appendChild(text);
+    vyhra.appendChild(restart);
     
+
+    vyhra.classList.add("vyherniObrazovka");
 }
   
+function restart(e) {
+    console.log("Klik");
+    location.reload();
+
+    e.preventDefault();
+}
+
 function novyObjekt(symbol, id, childName) {
     this.symbol = symbol;
     this.id = id;

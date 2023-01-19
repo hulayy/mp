@@ -128,7 +128,7 @@ div.t {
 }
 
 
-.vo.show {
+#vyhra.vyherniObrazovka {
     position: fixed;
     top: 0;
     text-align: center;
