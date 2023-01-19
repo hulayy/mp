@@ -129,22 +129,16 @@ function kontrolaVyhry(data, objekt, index) {
 function vyherniObrazovka(symbol) {
     var vyhra = document.getElementById('vyhra');
 
-    var text = document.createElement('h1');
-    text.className = "nadpis";
+    var text = document.getElementById("nadpis");
     text.innerText = "Vyhrál hráč se symbolem: " + symbol;
-
-    var restart = document.createElement('button');
-    restart.className = "restart";
-    restart.innerText = "Hrát znovu";
-    restart.addEventListener('click', restart, false);
-
-    vyhra.appendChild(text);
-    vyhra.appendChild(restart);
     
-
     vyhra.classList.add("vyherniObrazovka");
 }
-  
+
+var tlacitko = document.getElementById("restart")
+
+tlacitko.addEventListener('click', restart, true);
+
 function restart(e) {
     console.log("Klik");
     location.reload();
