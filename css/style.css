@@ -30,22 +30,6 @@ body {
     border: 1px solid black ; 
 }
 
-/* .box:nth-child(1n + 1) {
-    border-left: none;
-}
-
-.box:nth-child(26n + 26) {
-    border-right: none;
-}
-
-.box:nth-child(1n + 1) {
-    border-top: none;
-}
-
-.box:nth-child(1n + 339) {
-    border-bottom: none;
-} */
-
 .box:hover {
     background-color: rgb(211, 211, 211);
     cursor: pointer;
@@ -136,4 +120,8 @@ div.t {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.274);
+}
+
+#restart {
+    margin-inline: auto;
 }

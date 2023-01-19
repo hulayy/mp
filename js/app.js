@@ -14,6 +14,11 @@ let data = [
     [t] = [],
 ];
 
+let poradiText = document.createElement("h1");
+var symbolImg = document.createElement('div');
+symbolImg.className = symbol;
+
+poradiText.innerText = "Na řadě je hráč sy symbolem: " + symbolImg;
 
 hraciPole.forEach(box => {
     box.addEventListener('click', zpracujKlik, {once: true})
@@ -128,11 +133,13 @@ function kontrolaVyhry(data, objekt, index) {
 
 function vyherniObrazovka(symbol) {
     var vyhra = document.getElementById('vyhra');
+    var restartTlacitko = document.getElementById("restart");
 
     var text = document.getElementById("nadpis");
     text.innerText = "Vyhrál hráč se symbolem: " + symbol;
     
     vyhra.classList.add("vyherniObrazovka");
+    restartTlacitko.style.display = "flex";
 }
 
 var tlacitko = document.getElementById("restart")
