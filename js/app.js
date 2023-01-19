@@ -3,7 +3,7 @@ var symbol_x = 'x';
 var symbol_o = 'o';
 var symbol_t = 't';
 
-let symbol;
+let symbol = symbol_x;
 let poradi = 0;
 let index = 0;
 let cislo = 1; 
@@ -14,11 +14,10 @@ let data = [
     [t] = [],
 ];
 
-let poradiText = document.createElement("h1");
-var symbolImg = document.createElement('div');
-symbolImg.className = symbol;
+let poradiText = document.getElementById("poradiText");
 
-poradiText.innerText = "Na řadě je hráč sy symbolem: " + symbolImg;
+poradiText.innerText = "Na řadě je hráč se symbolem: " + symbol;
+
 
 hraciPole.forEach(box => {
     box.addEventListener('click', zpracujKlik, {once: true})
@@ -33,14 +32,17 @@ function zpracujKlik(e) {
         case 0:
             symbol = symbol_x;
             index = 0;
+            poradiText.innerText = "Na řadě: " + symbol;
             break;
         case 1:
             symbol = symbol_o;
             index = 1;
+            poradiText.innerText = "Na řadě: " + symbol;
             break;
         case 2:
             symbol = symbol_t;
             index = 2;
+            poradiText.innerText = "Na řadě: " + symbol;
             break;
     }
 
