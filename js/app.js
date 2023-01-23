@@ -16,7 +16,7 @@ let data = [
 
 let poradiText = document.getElementById("poradiText");
 
-poradiText.innerText = "Na řadě je hráč se symbolem: " + symbol;
+poradiText.innerText = "Na řadě:" + symbol_x;
 
 
 hraciPole.forEach(box => {
@@ -32,17 +32,17 @@ function zpracujKlik(e) {
         case 0:
             symbol = symbol_x;
             index = 0;
-            poradiText.innerText = "Na řadě: " + symbol;
+            poradiText.innerText = "Na řadě: " + symbol_o;
             break;
         case 1:
             symbol = symbol_o;
             index = 1;
-            poradiText.innerText = "Na řadě: " + symbol;
+            poradiText.innerText = "Na řadě: " + symbol_t;
             break;
         case 2:
             symbol = symbol_t;
             index = 2;
-            poradiText.innerText = "Na řadě: " + symbol;
+            poradiText.innerText = "Na řadě: " + symbol_x;
             break;
     }
 
