@@ -18,6 +18,7 @@ body {
 }
 
 .plocha {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -54,7 +55,7 @@ div.x::before {
     position: absolute;
     content: '';
     height: var(--velSymbolu);
-    width: calc(var(--velSymbolu) * .10);
+    width: calc(var(--velSymbolu) * .2);
     background-color: rgb(9, 72, 245);
     transform: rotate(45deg);
 }
@@ -63,7 +64,7 @@ div.x::after {
     position: absolute;
     content: '';
     height: var(--velSymbolu);
-    width: calc(var(--velSymbolu) * .10);
+    width: calc(var(--velSymbolu) * .2);
     background-color: rgb(9, 72, 245);
     transform: rotate(-45deg);
 }
@@ -79,10 +80,10 @@ div.o::before {
     position: absolute;
     content: '';
     height: calc(var(--velSymbolu) * .9);
-    width: calc(var(--velSymbolu) * .9);
+    width: calc(var(--velSymbolu) * .95);
     background-color: none;
     margin-top: .1em;
-    border: 5px solid red;
+    border: 7.5px solid red;
     border-radius: 50%;
 }
 
