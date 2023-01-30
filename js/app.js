@@ -16,7 +16,10 @@ let data = [
 
 let poradiText = document.getElementById("poradiText");
 
-poradiText.innerText = "Na řadě:" + symbol_x;
+poradiText.innerText = "Na řadě: ";
+
+let poradiSymbol = document.createElement('div');
+poradiSymbol.className = symbol;
 
 
 hraciPole.forEach(box => {
@@ -33,19 +36,22 @@ function zpracujKlik(e) {
             symbol = symbol_x;
             pozadi = "#41C2E5";
             index = 0;
-            poradiText.innerText = "Na řadě: " + symbol_o;
+            poradiText.innerText = "Na řadě: ";
+            poradiSymbol.className = symbol_o;
             break;
         case 1:
             symbol = symbol_o;
             pozadi = "#EABB05";
             index = 1;
-            poradiText.innerText = "Na řadě: " + symbol_t;
+            poradiText.innerText = "Na řadě: ";
+            poradiSymbol.className = symbol_t;
             break;
         case 2:
             symbol = symbol_t;
             pozadi = "#3AD215";
             index = 2;
-            poradiText.innerText = "Na řadě: " + symbol_x;
+            poradiText.innerText = "Na řadě: ";
+            poradiSymbol.className = symbol_x;
             break;
     }
 
@@ -59,7 +65,7 @@ function zpracujKlik(e) {
 }
 
 function vlozSymbol(box, symbol, pozadi) {
-    var symbolDiv = document.createElement('div');
+    let symbolDiv = document.createElement('div');
     symbolDiv.className = symbol;
 
     box.appendChild(symbolDiv);
@@ -73,11 +79,11 @@ function vlozSymbol(box, symbol, pozadi) {
 
     let objekt = new novyObjekt(symbol, id, childName);
 
-    var vyhercuvSymbol = kontrolaVyhry(data, objekt, index);
+    let vyhercuvSymbol = kontrolaVyhry(data, objekt, index);
 
     if (vyhercuvSymbol) {
         console.log("Vyhrál hráč se symbolem: " + vyhercuvSymbol);
-        vyherniObrazovka(vyhercuvSymbol);
+        vyherniObrazovka(vyhercuvSymbol, pozadi);
     }
 }
 
@@ -140,11 +146,12 @@ function kontrolaVyhry(data, objekt, index) {
     return null; 
 }
 
-function vyherniObrazovka(symbol) {
+function vyherniObrazovka(symbol, pozadi) {
     var vyhra = document.getElementById('vyhra');
     var restartTlacitko = document.getElementById("restart");
 
     var text = document.getElementById("nadpis");
+    text.style.color = pozadi;
     text.innerText = "Vyhrál hráč se symbolem: " + symbol;
     
     vyhra.classList.add("vyherniObrazovka");
