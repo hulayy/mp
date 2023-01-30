@@ -31,22 +31,25 @@ function zpracujKlik(e) {
     switch (poradi){
         case 0:
             symbol = symbol_x;
+            pozadi = "#41C2E5";
             index = 0;
             poradiText.innerText = "Na řadě: " + symbol_o;
             break;
         case 1:
             symbol = symbol_o;
+            pozadi = "#EABB05";
             index = 1;
             poradiText.innerText = "Na řadě: " + symbol_t;
             break;
         case 2:
             symbol = symbol_t;
+            pozadi = "#3AD215";
             index = 2;
             poradiText.innerText = "Na řadě: " + symbol_x;
             break;
     }
 
-    vlozSymbol(zakliknutyBox, symbol);
+    vlozSymbol(zakliknutyBox, symbol, pozadi);
 
     if (poradi < 2) {
         poradi++;
@@ -55,13 +58,17 @@ function zpracujKlik(e) {
     }
 }
 
-function vlozSymbol(box, symbol) {
+function vlozSymbol(box, symbol, pozadi) {
     var symbolDiv = document.createElement('div');
     symbolDiv.className = symbol;
 
     box.appendChild(symbolDiv);
 
     let id = box.getAttribute('id');
+    let zvolenyBox = document.getElementById(id);
+
+    zvolenyBox.style.backgroundColor = pozadi;
+
     let childName = box.childNodes[0].className;
 
     let objekt = new novyObjekt(symbol, id, childName);
