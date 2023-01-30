@@ -156,6 +156,7 @@ function vyherniObrazovka(symbol, pozadi) {
     
     vyhra.classList.add("vyherniObrazovka");
     restartTlacitko.style.display = "flex";
+    restartTlacitko.style.color
 }
 
 var tlacitko = document.getElementById("restart")
