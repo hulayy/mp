@@ -1,4 +1,5 @@
 var hraciPole = document.querySelectorAll('[data-cell]');
+var hudba = new Audio("https://www.youtube.com/watch?v=yyjUmv1gJEg");
 var symbol_x = 'x';
 var symbol_o = 'o';
 var symbol_t = 't';
@@ -13,6 +14,13 @@ let data = [
     [o] = [],
     [t] = [],
 ];
+
+// hudba.load();
+
+hudba.loop = true 
+
+hudba.play();
+
 
 let poradiText = document.getElementById("poradiText");
 
