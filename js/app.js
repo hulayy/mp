@@ -23,13 +23,16 @@ hudba.play();
 
 
 let poradiText = document.getElementById("poradiText");
+let headerElement = document.getElementsByClassName("header");
 
-let poradiSymbol = document.createElement('div');
+let poradiSymbol = document.createElement('img');
+poradiSymbol.src = "css/"+symbol+".png";
 poradiSymbol.className = symbol;
 
+headerElement.appendChild(poradiSymbol);
+
+
 poradiText.innerText = "Na řadě hráč číslo " + (poradi + 1);
-
-
 
 
 hraciPole.forEach(box => {
@@ -70,7 +73,8 @@ function zpracujKlik(e) {
         poradi = 0;
     }
 
-    poradiText.innerText = "Na řadě je hráč číslo " + (poradi + 1);
+    poradiSymbol.src = "css/"+poradiSymbol.className+".png";
+    poradiText.innerText = "Na řadě je hráč číslo ";//(poradi + 1);
 }
 
 function vlozSymbol(box, symbol, pozadi) {
