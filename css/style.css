@@ -69,11 +69,14 @@ div.x {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: calc(var(--velCtverce)/2.1);
-    margin-top: calc(var(--velCtverce)/10);
+    height: 100%;
+    /* margin-left: calc(var(--velCtverce)/2.1);
+    margin-top: calc(var(--velCtverce)/10); */
+    background-image: url(img/cross.png);
+    z-index: 1000;
 }
 
-div.x::before {
+/* div.x::before {
     position: absolute;
     content: '';
     height: var(--velSymbolu);
@@ -89,17 +92,18 @@ div.x::after {
     width: calc(var(--velSymbolu) * .2);
     background-color: rgb(9, 72, 245);
     transform: rotate(-45deg);
-}
+} */
 
 
 div.o {
     justify-content: center;
     align-items: center;
-    margin-left: calc(var(--velCtverce)/9);
-    margin-top: calc(var(--velCtverce)/11);
+    background-image: url(img/circle.png);
+    /* margin-left: calc(var(--velCtverce)/9);
+    margin-top: calc(var(--velCtverce)/11); */
 }
 
-div.o::before {
+/* div.o::before {
     position: absolute;
     content: '';
     height: calc(var(--velSymbolu) * .9);
@@ -108,11 +112,11 @@ div.o::before {
     margin-top: .1em;
     border: 7.5px solid red;
     border-radius: 50%;
-}
+} */
 
 div.t {
-    --t:7.5px;  /* Tloušťka */
-    --c:rgb(5, 119, 5); /* Barva */
+    /* --t:7.5px;  /* Tloušťka */
+    --c:rgb(5, 119, 5); /* Barva 
 
     width: 50px;
     height: calc(var(--velSymbolu) * 0.9);
@@ -120,17 +124,19 @@ div.t {
     border:var(--t) solid transparent;
     border-bottom-color:var(--c);
     background:
-        /* levá */
+        /* levá 
         linear-gradient(to bottom left,
         transparent 49.5%,var(--c) 50% calc(50% + var(--t)),
         transparent calc(50% + var(--t) + 1px)) right,
-        /* pravá */
+        /* pravá 
         linear-gradient(to bottom right,
         transparent 49.5%,var(--c) 50% calc(50% + var(--t)),
         transparent calc(50% + var(--t) + 1px)) left;
     background-size:50% 100%;
     background-origin:border-box;
-    background-repeat:no-repeat;
+    background-repeat:no-repeat; */
+
+    background-image: url(img/triangle.png);
 }
 
 div.x,
