@@ -57,7 +57,6 @@ body {
     margin: 2px;
     border-radius: 10px 10px;
     background: rgb(168, 168, 168);
-    /* border: 1px solid black ;  */
 }
 
 .box:hover {
@@ -65,78 +64,30 @@ body {
     cursor: pointer;
 }
 
-div.x {
+img.x {
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    /* margin-left: calc(var(--velCtverce)/2.1);
-    margin-top: calc(var(--velCtverce)/10); */
-    background-image: url(/css/img/cross.png);
-    z-index: 1000;
+    background-image: url(cross.png);
 }
 
-/* div.x::before {
-    position: absolute;
-    content: '';
-    height: var(--velSymbolu);
-    width: calc(var(--velSymbolu) * .2);
-    background-color: rgb(9, 72, 245);
-    transform: rotate(45deg);
-}
 
-div.x::after {
-    position: absolute;
-    content: '';
-    height: var(--velSymbolu);
-    width: calc(var(--velSymbolu) * .2);
-    background-color: rgb(9, 72, 245);
-    transform: rotate(-45deg);
-} */
-
-
-div.o {
+img.o {
     justify-content: center;
     align-items: center;
-    background-image: url(/css/img/circle.png);
-    /* margin-left: calc(var(--velCtverce)/9);
-    margin-top: calc(var(--velCtverce)/11); */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(circle.png);
 }
 
-/* div.o::before {
-    position: absolute;
-    content: '';
-    height: calc(var(--velSymbolu) * .9);
-    width: calc(var(--velSymbolu) * .95);
-    background-color: none;
-    margin-top: .1em;
-    border: 7.5px solid red;
-    border-radius: 50%;
-} */
-
-div.t {
-    /* --t:7.5px;  /* Tloušťka */
-    --c:rgb(5, 119, 5); /* Barva 
-
-    width: 50px;
-    height: calc(var(--velSymbolu) * 0.9);
-    display:inline-block;
-    border:var(--t) solid transparent;
-    border-bottom-color:var(--c);
-    background:
-        /* levá 
-        linear-gradient(to bottom left,
-        transparent 49.5%,var(--c) 50% calc(50% + var(--t)),
-        transparent calc(50% + var(--t) + 1px)) right,
-        /* pravá 
-        linear-gradient(to bottom right,
-        transparent 49.5%,var(--c) 50% calc(50% + var(--t)),
-        transparent calc(50% + var(--t) + 1px)) left;
-    background-size:50% 100%;
-    background-origin:border-box;
-    background-repeat:no-repeat; */
-
-    background-image: url(/css/img/triangle.png);
+img.t {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 div.x,

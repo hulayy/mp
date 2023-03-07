@@ -74,7 +74,12 @@ function zpracujKlik(e) {
 }
 
 function vlozSymbol(box, symbol, pozadi) {
-    let symbolDiv = document.createElement('div');
+
+    let symbolDiv = document.createElement("img");
+
+    symbolDiv.src = "css/"+symbol+".png"
+
+    // let symbolDiv = document.createElement('div');
     symbolDiv.className = symbol;
 
     box.appendChild(symbolDiv);
@@ -88,7 +93,7 @@ function vlozSymbol(box, symbol, pozadi) {
 
     let objekt = new novyObjekt(symbol, id, childName);
 
-    let vyhercuvSymbol = kontrolaVyhry(data, objekt, index);
+    let vyhercuvSymbol = kontrolaVyhry(objekt);
 
     if (vyhercuvSymbol) {
         console.log("Vyhrál hráč se symbolem: " + vyhercuvSymbol);
@@ -96,7 +101,7 @@ function vlozSymbol(box, symbol, pozadi) {
     }
 }
 
-function kontrolaVyhry(data, objekt, index) {
+function kontrolaVyhry(objekt) {
     console.log(objekt.childName + " " + objekt.id);
     
     for (let i = 0; i < 27*15; i++) {
