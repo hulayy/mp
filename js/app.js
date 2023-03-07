@@ -70,7 +70,7 @@ function zpracujKlik(e) {
         poradi = 0;
     }
 
-    poradiText.innerText = "Na řadě hráč číslo " + (poradi + 1);
+    poradiText.innerText = "Na řadě je hráč číslo " + (poradi + 1);
 }
 
 function vlozSymbol(box, symbol, pozadi) {
