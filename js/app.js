@@ -23,13 +23,13 @@ hudba.play();
 
 
 let poradiText = document.getElementById("poradiText");
-let headerElement = document.getElementsByClassName("header");
+// let headerElement = document.getElementsByClassName("header");
 
-let poradiSymbol = document.createElement('img');
-poradiSymbol.src = "css/"+symbol+".png";
-poradiSymbol.className = symbol;
+// let poradiSymbol = document.createElement('img');
+// poradiSymbol.src = "css/"+symbol+".png";
+// poradiSymbol.className = symbol;
 
-headerElement.appendChild(poradiSymbol);
+// headerElement.appendChild(poradiSymbol);
 
 
 poradiText.innerText = "Na řadě hráč číslo " + (poradi + 1);
@@ -49,19 +49,19 @@ function zpracujKlik(e) {
             symbol = symbol_x;
             pozadi = "#41C2E5";
             index = 0;
-            poradiSymbol.className = symbol_o;
+            // poradiSymbol.className = symbol_o;
             break;
         case 1:
             symbol = symbol_o;
             pozadi = "#EABB05";
             index = 1;
-            poradiSymbol.className = symbol_t;
+            // poradiSymbol.className = symbol_t;
             break;
         case 2:
             symbol = symbol_t;
             pozadi = "#3AD215";
             index = 2;
-            poradiSymbol.className = symbol_x;
+            // poradiSymbol.className = symbol_x;
             break;
     }
 
@@ -73,8 +73,8 @@ function zpracujKlik(e) {
         poradi = 0;
     }
 
-    poradiSymbol.src = "css/"+poradiSymbol.className+".png";
-    poradiText.innerText = "Na řadě je hráč číslo ";//(poradi + 1);
+    // poradiSymbol.src = "css/"+poradiSymbol.className+".png";
+    poradiText.innerText = "Na řadě je hráč číslo "+(poradi + 1);//(poradi + 1);
 }
 
 function vlozSymbol(box, symbol, pozadi) {
