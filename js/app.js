@@ -1,39 +1,15 @@
 var hraciPole = document.querySelectorAll('[data-cell]');
-var hudba = new Audio("https://www.youtube.com/watch?v=yyjUmv1gJEg");
 var symbol_x = 'x';
 var symbol_o = 'o';
 var symbol_t = 't';
 
 let symbol = symbol_x;
 let poradi = 0;
-let index = 0;
 let cislo = 1; 
 
-let data = [
-    [x] = [],
-    [o] = [],
-    [t] = [],
-];
+let img = document.getElementById('poradiSymbol');
 
-// hudba.load();
-
-hudba.loop = true 
-
-hudba.play();
-
-
-let poradiText = document.getElementById("poradiText");
-// let headerElement = document.getElementsByClassName("header");
-
-// let poradiSymbol = document.createElement('img');
-// poradiSymbol.src = "css/"+symbol+".png";
-// poradiSymbol.className = symbol;
-
-// headerElement.appendChild(poradiSymbol);
-
-
-poradiText.innerText = "Na řadě hráč číslo " + (poradi + 1);
-
+img.src = "css/"+symbol+".png";
 
 hraciPole.forEach(box => {
     box.addEventListener('click', zpracujKlik, {once: true})
@@ -48,20 +24,17 @@ function zpracujKlik(e) {
         case 0:
             symbol = symbol_x;
             pozadi = "#41C2E5";
-            index = 0;
-            // poradiSymbol.className = symbol_o;
+            poradiSymbol = symbol_o;
             break;
         case 1:
             symbol = symbol_o;
             pozadi = "#EABB05";
-            index = 1;
-            // poradiSymbol.className = symbol_t;
+            poradiSymbol = symbol_t;
             break;
         case 2:
             symbol = symbol_t;
             pozadi = "#3AD215";
-            index = 2;
-            // poradiSymbol.className = symbol_x;
+            poradiSymbol = symbol_x;
             break;
     }
 
@@ -73,8 +46,7 @@ function zpracujKlik(e) {
         poradi = 0;
     }
 
-    // poradiSymbol.src = "css/"+poradiSymbol.className+".png";
-    poradiText.innerText = "Na řadě je hráč číslo "+(poradi + 1);//(poradi + 1);
+    img.src = "css/"+poradiSymbol+".png";
 }
 
 function vlozSymbol(box, symbol, pozadi) {
