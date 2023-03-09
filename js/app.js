@@ -142,8 +142,11 @@ function vyherniObrazovka(symbol, pozadi) {
 
     var text = document.getElementById("nadpis");
     text.style.color = pozadi;
-    text.innerText = "Vyhrál hráč se symbolem: " + symbol;
+    text.innerText = "Vyhrál hráč se symbolem:";
     
+    var img = document.getElementById("vyhraSymbol");
+
+    img.src = "css/"+symbol+".png"
     vyhra.classList.add("vyherniObrazovka");
     restartTlacitko.style.display = "flex";
 }
