@@ -55,7 +55,6 @@ function vlozSymbol(box, symbol, pozadi) {
 
     symbolDiv.src = "css/"+symbol+".png"
 
-    // let symbolDiv = document.createElement('div');
     symbolDiv.className = symbol;
 
     box.appendChild(symbolDiv);
